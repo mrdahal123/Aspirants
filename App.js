@@ -1,28 +1,28 @@
 //import liraries
 import React, { Component } from 'react';
-import AuthNavigation from './Navigation/StackNavigation/AuthNavigation';
 import {DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
-import { NavigationContainer } from '@react-navigation/native';
-
+import Routes from './Navigation/StackNavigation/Routes';
+import store from './Redux/Store/Store';
+import {Provider, useDispatch, useSelector} from 'react-redux';
 // create a component
 
 const theme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    primary: 'green',
+    primary: '#083603',
     accent: 'yellow',
   },
 };
 const MyComponent = () => {
   return (
-<NavigationContainer>
-  {/* <StoreProvider store={store}> */}
+
+  <Provider store={store}>
     <PaperProvider theme={theme}>
-      <AuthNavigation />
+      <Routes />
     </PaperProvider>
-  {/* </StoreProvider> */}
-</NavigationContainer>
+  </Provider> 
+
   );
 };
 export default MyComponent;

@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import AuthNavigation from './AuthNavigation';
-// import {Provider, useDispatch, useSelector} from 'react-redux';
-import store from './../store/store';
-import MainNavigation from './StackNavigation';
+import store from './../../Redux/Store/Store';
+import MainNavigation from './MainNavigation';
+import { useSelector } from 'react-redux';
 const Routes = () => {
   const token = useSelector(
-    state => state.LoginUserDetailReducer.loginUserDetail,
+    state => state.LoginUserDetailReducer.userDetails,
   );
   console.log('token data', token);
 
@@ -15,11 +15,11 @@ const Routes = () => {
     // Spinner();
   }, []);
   return (
-    <Provider store={store}>
+
       <NavigationContainer>
         {token === null ? <AuthNavigation /> : <MainNavigation />}
       </NavigationContainer>
-    </Provider>
+   
   );
 };
 

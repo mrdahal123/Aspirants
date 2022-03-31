@@ -8,6 +8,7 @@ const LoginUserDetailReducer = (state = intialState, action) => {
 
   switch (action.type) {
     case LOGIN_USER:
+      console.log("action",action);
       return {
         ...state,
         userDetails: action.payload
