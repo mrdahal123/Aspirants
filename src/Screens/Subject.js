@@ -1,13 +1,16 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet,Image } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient'
+import { Card,Button } from 'react-native-paper';
 
 // create a component
 const Subject = () => {
     return (
-        <View style={styles.container}>
-            <Text>Subject</Text>
-        </View>
+        <LinearGradient
+            colors={['#FF9933', '#FFFFFF', '#138808']} style={styles.container}>
+           <Image source={{uri:"http://eskipaper.com/images/history-wallpaper-9.jpg"}} style={{width:100,height:100}}/>
+        </LinearGradient>
     );
 };
 
@@ -15,11 +18,9 @@ const Subject = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#2c3e50',
     },
 });
 
 //make this component available to the app
 export default Subject;
+

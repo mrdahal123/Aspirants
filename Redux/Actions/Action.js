@@ -1,4 +1,4 @@
-import { LOGIN_USER } from "../Type/Type";
+import { LOGIN_USER ,SUBJECTS } from "../Type/Type";
 export  const LoginAction = (payload) => {
     console.log(payload)
     return{
@@ -6,3 +6,10 @@ export  const LoginAction = (payload) => {
         payload:payload,
     }
 }
+export const Subjects = (SubjectData) => {
+    console.log(SubjectData)
+    return{
+        type:SUBJECTS,
+        payload:SubjectData,
+    }
+} 

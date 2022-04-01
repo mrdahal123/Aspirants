@@ -1,4 +1,4 @@
-import { LOGIN_USER } from "../Type/Type";
+import { LOGIN_USER  } from "../Type/Type";
 const intialState = {
     userDetails :null
 };
@@ -20,3 +20,5 @@ const LoginUserDetailReducer = (state = intialState, action) => {
   }
 };
 export default LoginUserDetailReducer;
+
+
