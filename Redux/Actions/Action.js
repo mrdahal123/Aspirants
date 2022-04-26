@@ -6,10 +6,30 @@ export  const LoginAction = (payload) => {
         payload:payload,
     }
 }
-export const Subjects = (SubjectData) => {
-    console.log(SubjectData)
-    return{
-        type:SUBJECTS,
-        payload:SubjectData,
-    }
+const subjectDataApi = ('https://mocki.io/v1/eebaf1e7-3230-4209-ac45-49e3d79b0bcc');
+export const Subjects = () => {
+   try{
+       return async dispatch => {
+           const result = await fetch(subjectDataApi,{
+               method:'GET',
+               headers :{
+                   'Content-type' :'application/json',
+               }
+           });
+           const json = await result.json();
+           console.log(json);
+           if(json){
+              dispatch ({
+                  type:SUBJECTS,
+                  payload:json,
+              }) 
+           }
+           else {
+               console.log("data not found")
+           }
+       }
+   }
+   catch(error) {
+       console.log(error);
+   }
 } 

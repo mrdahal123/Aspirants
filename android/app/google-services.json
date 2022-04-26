@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "487971068273",
+    "project_id": "aspirants-4d2c2",
+    "storage_bucket": "aspirants-4d2c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:487971068273:android:ca40856e2c2317da953ed0",
+        "android_client_info": {
+          "package_name": "com.aspirants"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "487971068273-s8kannth4jvfmc3hf9fi0cndaaan6hb5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJmKx_ylLvMWWTewU4BjmR0keYAtL-LdI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "487971068273-s8kannth4jvfmc3hf9fi0cndaaan6hb5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

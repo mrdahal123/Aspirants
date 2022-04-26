@@ -19,7 +19,6 @@ const Routes = () => {
       <NavigationContainer>
         {token === null ? <AuthNavigation /> : <MainNavigation />}
       </NavigationContainer>
-   
   );
 };
 

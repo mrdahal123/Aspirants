@@ -1,8 +1,15 @@
 import { SUBJECTS } from "../Type/Type";
 const intialState = {
-    subjectdata:null,
+    subjectdata:[],
 }
 export  const SubjectDetailsReducers = (state = intialState , action) =>{
-    // api https://mocki.io/v1/eebaf1e7-3230-4209-ac45-49e3d79b0bcc
-
+    switch (action.type) {
+        case SUBJECTS :
+            console.log('scton',action)
+            let apiData = action.payload
+            state.subjectdata=apiData
+            return{state};
+        default :
+        return state;
+    }
 }
